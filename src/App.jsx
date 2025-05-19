@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react
 import UserTable from './components/UserTable';
 import UserForm from './components/UserForm';
 import UserView from './components/UserView';
-import { Layout, Menu } from 'antd'; // For basic layout
+import { Layout,Button} from 'antd'; // For basic layout
 import './App.css'; // You can add global styles here if needed
 
 const { Header, Content } = Layout;
@@ -64,12 +64,12 @@ function App() {
     <Router>
       <Layout className="min-h-screen "> 
         <Header>
-          <div className="logo " /> 
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-            <Menu.Item key="1">
+          {/* <div className="logo " />  */}
+        <div className="mt-6 flex justify-start">
+           <Button className='p-6 mt-14 m-2' type="primary">
               <Link to="/">User Management</Link>
-            </Menu.Item>
-          </Menu>
+           </Button>
+        </div>
         </Header>
         <Content style={{ padding: '0 50px', marginTop: '10px' }}> 
           <div className="p-4 bg-white rounded-lg shadow-md"> 
