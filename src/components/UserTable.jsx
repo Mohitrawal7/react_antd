@@ -26,7 +26,7 @@ const UserTable = ({ users, onDelete }) => {
       dataIndex: 'userType',
       key: 'userType',
       render: (userType) => (
-         <Tag color={userType === 'Admin User' ? 'green' : 'yellow'}>  {/* highlight color */} {/*  */} 
+         <Tag color={userType === 'Admin User' ? 'green' : 'yellow'}> 
           {userType.toUpperCase()}
         </Tag>
       ),
@@ -63,7 +63,7 @@ const UserTable = ({ users, onDelete }) => {
 
   return (
     <div>
-      <div className="mb-4 flex justify-end"> 
+      <div className="mb-4 m-8 flex justify-end"> 
         <Button
           type="primary"
           icon={<PlusOutlined />}
