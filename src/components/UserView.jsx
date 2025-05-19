@@ -30,13 +30,13 @@ const UserView = ({ getUserById }) => {
 
   if (!user) {
     return (
-      <Alert
+      <Alert className='my-28 mx-10` p-4'
         message="Error"
         description="User not found."
         type="error"
         showIcon
         action={
-          <Button size="small" type="primary" onClick={() => navigate('/')}>
+          <Button className='' size="small" type="primary" onClick={() => navigate('/')}>
             Back to List
           </Button>
         }

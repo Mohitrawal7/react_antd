@@ -105,8 +105,7 @@ className=''
         </Button>
         <Button htmlType="button" onClick={() => navigate('/')}>
           Cancel
-        </Button>
-        
+        </Button>       
       </Space>
     </Form.Item>
   </Form>

@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react
 import UserTable from './components/UserTable';
 import UserForm from './components/UserForm';
 import UserView from './components/UserView';
-import { Layout,Button} from 'antd'; // For basic layout
-import './App.css'; // You can add global styles here if needed
+import { Layout,Button} from 'antd'; 
+import './App.css'; 
 
 const { Header, Content } = Layout;
 
@@ -12,28 +12,12 @@ const { Header, Content } = Layout;
 const initialUsers = [
   {
     userId: 1,
-    firstName: 'John',
-    lastName: 'Doe',
-    userName: 'johndoe',
+    firstName: 'Mohit',
+    lastName: 'Rawal',
+    userName: 'rawal7',
     userType: 'Admin User',
-    department: 'Backend',
-  },
-  {
-    userId: 2,
-    firstName: 'Jane',
-    lastName: 'Smith',
-    userName: 'janesmith',
-    userType: 'System User',
     department: 'Frontend',
-  },
-  {
-    userId: 3,
-    firstName: 'Alice',
-    lastName: 'Brown',
-    userName: 'aliceb',
-    userType: 'Admin User',
-    department: 'QA',
-  },
+  }
 ];
 
 function App() {
