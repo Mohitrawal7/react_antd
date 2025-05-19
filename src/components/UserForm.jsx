@@ -46,7 +46,7 @@ const onFinishFailed = (errorInfo) => {
 console.log('Failed:', errorInfo);
 };
 return (
-<Card className='m-20' title={<Title level={3}>{pageTitle}</Title>}>
+<Card className='m-20 p-7' title={<Title level={3}>{pageTitle}</Title>}>
 <Form
 {...layout}
 form={form}
@@ -100,10 +100,10 @@ className=''
 
     <Form.Item {...tailLayout}>
       <Space>
-        <Button type="primary" htmlType="submit" loading={loading}>
+        <Button className='hover:bg-black bg-green-600' type="primary" htmlType="submit" loading={loading}>
           {isUpdateMode ? 'Update User' : 'Create User'}
         </Button>
-        <Button htmlType="button" onClick={() => navigate('/')}>
+        <Button  htmlType="button" onClick={() => navigate('/')}>
           Cancel
         </Button>       
       </Space>

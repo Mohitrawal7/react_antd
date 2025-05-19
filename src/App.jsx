@@ -48,9 +48,9 @@ function App() {
     <Router>
       <Layout className="min-h-screen "> 
         <Header>
-          {/* <div className="logo " />  */}
+          {/* <div className="logo" />  */}
         <div className="mt-6 flex justify-start">
-           <Button className='p-6 mt-14 m-2' type="primary">
+           <Button className='p-6 mt-14 m-2 bg-green-600' type="primary">
               <Link to="/">User Management</Link>
            </Button>
         </div>

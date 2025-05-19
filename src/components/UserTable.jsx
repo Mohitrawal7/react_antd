@@ -57,7 +57,8 @@ const UserTable = ({ users, onDelete }) => {
             onClick={() => navigate(`/user/update/${record.userId}`)}
             title="Edit"
           />
-            <Button type="primary"
+            <Button  
+             type="primary"
              danger icon={<DeleteOutlined />}
              onClick={()=> onDelete(record.userId)}
              title="Delete" />
@@ -70,6 +71,7 @@ const UserTable = ({ users, onDelete }) => {
     <div>
       <div className="mb-4 m-8 flex justify-end"> 
         <Button
+        className='bg-green-600'
           type="primary"
           icon={<PlusOutlined />}
           onClick={() => navigate('/user/create')}
@@ -81,7 +83,7 @@ const UserTable = ({ users, onDelete }) => {
         columns={columns}
         dataSource={users}
         rowKey="userId" 
-        pagination={{ pageSize: 7 }} 
+        pagination={{ pageSize: 1 }} 
         bordered 
       />
     </div>
