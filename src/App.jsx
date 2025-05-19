@@ -8,7 +8,7 @@ import './App.css'; // You can add global styles here if needed
 
 const { Header, Content } = Layout;
 
-// Sample initial users
+// Sample initial users form web server used for now but can be removed later on
 const initialUsers = [
   {
     userId: 1,
