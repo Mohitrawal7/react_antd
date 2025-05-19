@@ -1,4 +1,4 @@
-import { Table, Button, Space, Tag, Popconfirm } from 'antd';
+import { Table, Button, Space } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { EditOutlined, EyeOutlined, DeleteOutlined, PlusOutlined } from '@ant-design/icons';
 
@@ -26,15 +26,20 @@ const UserTable = ({ users, onDelete }) => {
       dataIndex: 'userType',
       key: 'userType',
       render: (userType) => (
-         <Tag color={userType === 'Admin User' ? 'green' : 'yellow'}> 
+         <span className={userType === 'Admin User' ? 'text-green-600' : 'text-yellow-500'}> 
           {userType.toUpperCase()}
-        </Tag>
+        </span>
       ),
     },
     {
       title: 'Department',
       dataIndex: 'department',
       key: 'department',
+      render: (department) => (
+         <span className={department === 'Frontend' ||department==='Backend' ? 'text-red-700' : 'text-blue-700'}> 
+          {department}
+        </span>
+      ),
     },
     {
       title: 'Action',

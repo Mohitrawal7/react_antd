@@ -50,6 +50,12 @@ const UserView = ({ getUserById }) => {
     </span>
   );
 
+  //same but for department
+   const departmentDisplay = (
+    <span className={user.department === 'Frontend' ||user.department==='Backend' ? 'text-red-600 font-semibold' : 'text-blue-600 font-semibold'}>
+      {user.department}
+    </span>
+  );
 
   return (
     <Card className='m-20 p-3'
@@ -66,7 +72,7 @@ const UserView = ({ getUserById }) => {
         <Descriptions.Item label="First Name">{user.firstName}</Descriptions.Item>
         <Descriptions.Item label="Last Name">{user.lastName}</Descriptions.Item>
         <Descriptions.Item label="User Type" >{userTypeDisplay}</Descriptions.Item>
-        <Descriptions.Item label="Department" >{user.department}</Descriptions.Item>
+        <Descriptions.Item label="Department" >{departmentDisplay}</Descriptions.Item>
       </Descriptions>
     </Card>
   );
