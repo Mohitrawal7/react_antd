@@ -78,14 +78,19 @@ const UserTable = ({ users, onDelete }) => {
         >
           Add User
         </Button>
-      </div>
+      </div >
+      <div className='flex-col justify-between '>
       <Table
         columns={columns}
         dataSource={users}
         rowKey="userId" 
-        pagination={{ pageSize: 1 }} 
+        pagination={{
+          pageSize: 7,
+          position:['bottomCenter'],
+        }} 
         bordered 
       />
+      </div>
     </div>
   );
 };

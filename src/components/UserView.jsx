@@ -58,10 +58,10 @@ const UserView = ({ getUserById }) => {
   );
 
   return (
-    <Card className='m-20 p-7'
+    <Card className='m-2 p-7'
       title={<Title className='mt-2 mr-8' level={3}>User Details: {user.firstName} {user.lastName}</Title>}
       extra={
-        <Button  className='ml-2  text-base bg-blue-600' onClick={() => navigate('/')}>
+        <Button  className='ml-2  text-base bg-green-600 text-white' onClick={() => navigate('/')}>
           Back to List
         </Button>
       }

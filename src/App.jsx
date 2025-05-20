@@ -4,7 +4,6 @@ import UserTable from './components/UserTable';
 import UserForm from './components/UserForm';
 import UserView from './components/UserView';
 import { Layout,Button} from 'antd'; 
-import './App.css'; 
 
 const { Header, Content } = Layout;
 
@@ -48,9 +47,8 @@ function App() {
     <Router>
       <Layout className="min-h-screen "> 
         <Header>
-          {/* <div className="logo" />  */}
-        <div className="mt-6 flex justify-start">
-           <Button className='p-6 mt-14 m-2 bg-green-600' type="primary">
+        <div className="mt-2 flex justify-start">
+           <Button className='p-6 mt-0 m-2 bg-green-600' type="primary">
               <Link to="/">User Management</Link>
            </Button>
         </div>

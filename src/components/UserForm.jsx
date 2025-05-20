@@ -5,10 +5,10 @@ const { Option } = Select;
 const { Title } = Typography;
 const layout = {
 labelCol: { span: 8 }, 
-wrapperCol: { span: 16 },
+wrapperCol: { span: 20 },
 };
 const tailLayout = {
-wrapperCol: { offset: 8, span: 16 }, 
+wrapperCol: { offset: 6, span: 16 }, 
 };
 const UserForm = ({ onSave, getUserById, mode }) => {
 const [form] = Form.useForm(); 
@@ -46,7 +46,7 @@ const onFinishFailed = (errorInfo) => {
 console.log('Failed:', errorInfo);
 };
 return (
-<Card className='m-20 p-7' title={<Title level={3}>{pageTitle}</Title>}>
+<Card className='m-2 p-7' title={<Title level={2}>{pageTitle}</Title>}>
 <Form
 {...layout}
 form={form}
@@ -58,13 +58,14 @@ className="max-w-xl mx-auto "
 <Form.Item
 label="First Name"
 name="firstName"
-className=''
+
 >
 <Input />
 </Form.Item>
 <Form.Item
       label="Last Name"
       name="lastName"
+      
     >
       <Input />
     </Form.Item>
@@ -72,6 +73,7 @@ className=''
     <Form.Item
       label="User Name"
       name="userName"
+      
     >
       <Input />
     </Form.Item>
