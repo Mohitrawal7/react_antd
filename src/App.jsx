@@ -48,7 +48,7 @@ function App() {
       <Layout className="min-h-screen "> 
         <Header>
         <div className="mt-2 flex justify-start">
-           <Button className='p-6 mt-0 m-2 bg-green-600' type="primary">
+           <Button className='p-6 mt-0 m-2 bg-green-600 text-white' type="secondary">
               <Link to="/">User Management</Link>
            </Button>
         </div>

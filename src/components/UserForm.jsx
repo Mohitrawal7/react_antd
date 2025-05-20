@@ -57,16 +57,13 @@ className="max-w-xl mx-auto "
 >
 <Form.Item
 label="First Name"
-name="firstName"
-
->
-<Input />
+name="firstName"  >
+    <Input />
 </Form.Item>
-<Form.Item
+
+  <Form.Item
       label="Last Name"
-      name="lastName"
-      
-    >
+      name="lastName"     >
       <Input />
     </Form.Item>
 
@@ -102,7 +99,7 @@ name="firstName"
 
     <Form.Item {...tailLayout}>
       <Space>
-        <Button className='hover:bg-black bg-green-600' type="primary" htmlType="submit" loading={loading}>
+        <Button className=' text-white bg-green-600' type="secondary" htmlType="submit" loading={loading}>
           {isUpdateMode ? 'Update User' : 'Create User'}
         </Button>
         <Button  htmlType="button" onClick={() => navigate('/')}>
