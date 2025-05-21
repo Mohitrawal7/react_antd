@@ -72,7 +72,7 @@ const UserTable = ({ users, onDelete }) => {
     <div>
       <div className="mb-4 m-8 flex justify-end"> 
         <Button
-        className='bg-green-600 text-white'
+        className='bg-green-600 overflow-auto text-white'
           type="secondary"
           icon={<PlusOutlined />}
           onClick={() => navigate('/user/create')}
@@ -83,6 +83,7 @@ const UserTable = ({ users, onDelete }) => {
       <div className='flex-col justify-between '>
       <Table
         columns={columns}
+        className='overflow-auto'
         dataSource={users}
         rowKey="userId" 
         pagination={{

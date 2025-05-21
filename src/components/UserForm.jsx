@@ -3,13 +3,6 @@ import {Space,Form, Input, Button, Select, Card, Typography } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
 const { Option } = Select;
 const { Title } = Typography;
-const layout = {
-labelCol: { span: 8 }, 
-wrapperCol: { span: 20 },
-};
-const tailLayout = {
-wrapperCol: { offset: 6, span: 16 }, 
-};
 const UserForm = ({ onSave, getUserById, mode }) => {
 const [form] = Form.useForm(); 
 const navigate = useNavigate();
@@ -46,14 +39,16 @@ const onFinishFailed = (errorInfo) => {
 console.log('Failed:', errorInfo);
 };
 return (
-<Card className='m-2 p-7' title={<Title level={2}>{pageTitle}</Title>}>
+<Card className='m-2 p-7 overflow-y-auto scroll-smooth '
+ title={<Title className='whitespace-normal break-words font-semibold '
+  level={2}>{pageTitle}</Title>}
+ >
 <Form
-{...layout}
 form={form}
 name="user_form"
 onFinish={onFinish}
 onFinishFailed={onFinishFailed}
-className="max-w-xl mx-auto "
+className=" max-w-xl mx-auto "
 >
 <Form.Item
 label="First Name"
@@ -97,7 +92,9 @@ name="firstName"  >
       </Select>
     </Form.Item>
 
-    <Form.Item {...tailLayout}>
+    <Form.Item 
+    className='flex justify-center'
+    >
       <Space>
         <Button className=' text-white bg-green-600' type="secondary" htmlType="submit" loading={loading}>
           {isUpdateMode ? 'Update User' : 'Create User'}
@@ -109,7 +106,6 @@ name="firstName"  >
     </Form.Item>
   </Form>
 </Card>
-
 );
 };
 export default UserForm;
