@@ -60,12 +60,12 @@ const UserView = ({ getUserById }) => {
   return (
     <Card className='m-2 p-7 w-full flex-col'
       title={
-         <Title className='mt-2 mr-4 sm:text-lg whitespace-normal break-words font-semibold truncate' level={3}>
+         <Title className='mt-2 mr-0 sccasm:text-lg whitespace-normal break-words font-semibold truncate' level={3}>
           User Details: {user.firstName} {user.lastName}
           </Title>
             }
       extra={
-        <Button  className=' sm:mb-0 sm:mt-0 mt-20 mb-4 text-base bg-green-600 text-white' 
+        <Button  className='right-0 ml-8 sm:mb-0 sm:mt-0 mt-20 mb-4 text-base bg-green-600 text-white' 
         onClick={() => navigate('/')}
         >
           Back to List

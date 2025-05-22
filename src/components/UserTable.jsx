@@ -1,9 +1,23 @@
-import { Table, Button, Space } from 'antd';
+import { Table, Button, Space,Input } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { EditOutlined, EyeOutlined, DeleteOutlined, PlusOutlined } from '@ant-design/icons';
+import Search from 'antd/es/transfer/search';
+import { useState } from 'react';
 
 const UserTable = ({ users, onDelete }) => {
   const navigate = useNavigate();
+  //later update search adding in top with add user
+// const [searchText, setSearchText] = useState('');
+
+//   const searched = (e) => {
+//     setSearchText(e.target.value);
+//   };
+
+//   const filterUser = users.filter((user) =>
+//     user.userName==searchText
+//   );
+//not working properly later change
+
 
   const columns = [
     {
@@ -68,9 +82,15 @@ const UserTable = ({ users, onDelete }) => {
     },
   ];
 
+
   return (
     <div>
       <div className="mb-4 m-8 flex justify-end"> 
+       {/* <Input.Search
+        value={searchText} 
+        className='mx-4'
+        onChange={searched}
+        /> */}
         <Button
         className='bg-green-600 overflow-auto text-white'
           type="secondary"
