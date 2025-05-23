@@ -30,7 +30,7 @@ const UserView = ({ getUserById }) => {
 
   if (!user) {
     return (
-      <Alert className='my-28 mx-10` p-4'
+      <Alert className='my-28 mx-10 p-4'
         message="Error"
         description="User not found."
         type="error"
@@ -72,7 +72,7 @@ const UserView = ({ getUserById }) => {
         </Button>
              }
     >
-      <Descriptions className='mt-2' bordered column={{ xxl: 1, xl: 1, lg: 1, md: 1, sm: 1, xs:1  }}>
+      <Descriptions className='mt-2' bordered column={{ xxl: 1, xl: 1, lg: 1, md: 1, sm:1 , xs:1  }}>
         <Descriptions.Item label="User ID">{user.userId}</Descriptions.Item>
         <Descriptions.Item label="User Name">{user.userName}</Descriptions.Item>
         <Descriptions.Item label="First Name">{user.firstName}</Descriptions.Item>

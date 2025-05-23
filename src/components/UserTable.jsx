@@ -6,17 +6,17 @@ import { useState } from 'react';
 
 const UserTable = ({ users, onDelete }) => {
   const navigate = useNavigate();
-  //later update search adding in top with add user
-// const [searchText, setSearchText] = useState('');
+  // later update search adding in top with add user
+const [searchText, setSearchText] = useState('');
 
-//   const searched = (e) => {
-//     setSearchText(e.target.value);
-//   };
+  const searched = (e) => {
+    setSearchText(e.target.value);
+  };
 
-//   const filterUser = users.filter((user) =>
-//     user.userName==searchText
-//   );
-//not working properly later change
+  const filterUser = users.filter((user) =>
+    user.userName.includes(searchText) || user.department.includes(searchText)
+  );
+// not working properly later change
 
 
   const columns = [
@@ -86,15 +86,15 @@ const UserTable = ({ users, onDelete }) => {
   return (
     <div>
       <div className="mb-4 m-8 flex justify-end"> 
-       {/* <Input.Search
+       <Input.Search
         value={searchText} 
-        className='mx-4'
+        className='mx-10 mt-1 lg:w-[20%] sm:w-[40%]'
         onChange={searched}
-        /> */}
+        />
         <Button
-        className='bg-green-600 overflow-auto text-white'
+        className='w-10 h-20 sm:w-24 p-4 flex-col sm:flex-row sm:h-10  whitespace-normal break-words bg-green-600 text-white'
           type="secondary"
-          icon={<PlusOutlined />}
+          icon={< PlusOutlined className='flex' />}
           onClick={() => navigate('/user/create')}
         >
           Add User
@@ -104,7 +104,7 @@ const UserTable = ({ users, onDelete }) => {
       <Table
         columns={columns}
         className='overflow-auto'
-        dataSource={users}
+        dataSource={filterUser}
         rowKey="userId" 
         pagination={{
           pageSize: 4,

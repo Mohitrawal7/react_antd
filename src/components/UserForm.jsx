@@ -3,7 +3,7 @@ import {Space,Form, Input, Button, Select, Card, Typography } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
 const { Option } = Select;
 const { Title } = Typography;
-const UserForm = ({ onSave, getUserById, mode }) => {
+const UserForm = ({ onSave, getUserById, mode}) => {
 const [form] = Form.useForm(); 
 const navigate = useNavigate();
 const { userId } = useParams(); 
