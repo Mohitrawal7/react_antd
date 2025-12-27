@@ -16,6 +16,27 @@ const initialUsers = [
     userName: 'rawal7',
     userType: 'Admin User',
     department: 'Frontend',
+  },{
+    userId: 1,
+    firstName: 'Mohit',
+    lastName: 'Rawal',
+    userName: 'rawal7',
+    userType: 'Admin User',
+    department: 'Frontend',
+  },{
+    userId: 1,
+    firstName: 'Mohit',
+    lastName: 'Rawal',
+    userName: 'rawal7',
+    userType: 'Admin User',
+    department: 'Frontend',
+  },{
+    userId: 1,
+    firstName: 'Mohit',
+    lastName: 'Rawal',
+    userName: 'rawal7',
+    userType: ' User',
+    department: 'Frontend',
   }
 ];
 
@@ -82,3 +103,26 @@ function App() {
 }
 
 export default App;  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
